@@ -1,2 +1,7 @@
-# tranning-fe
-Learing html css and reactjs weback babel
+# Webpack
+- chạy lệnh : `yarn init` để cài package.json
+
+
+## Webpack và webpack-cli
+
+
