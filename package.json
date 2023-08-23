@@ -7,10 +7,12 @@
   "scripts": {
     "build": "webpack",
     "start": "webpack serve",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "lint:scripts": "eslint --fix --quiet"
   },
   "devDependencies": {
     "css-loader": "^6.8.1",
+    "eslint": "^8.47.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-prettier": "^5.0.0",
     "html-webpack-plugin": "^5.5.3",
