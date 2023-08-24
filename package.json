@@ -37,7 +37,7 @@
     }
   },
   "lint-staged": {
-    "*.{js}": [
+    "src/**/*.{ts,tsx}": [
       "yarn lint:scripts"
     ]
   }
