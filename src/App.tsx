@@ -1,6 +1,7 @@
 import React from 'react';
+import { FC } from 'react';
 
-function App() {
+const App: FC = () => {
   return (
     <div className="container">
       <h1>Title h1</h1>
@@ -39,6 +40,6 @@ function App() {
       </table>
     </div>
   );
-}
+};
 
 export default App;

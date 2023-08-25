@@ -15,7 +15,8 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.tsx?$/,
+        test: /\.ts|tsx?$/,
+        exclude: /node_modules/,
         loader: 'babel-loader',
       },
       {
@@ -48,5 +49,11 @@ module.exports = {
     hints: false,
     maxEntrypointSize: 512000,
     maxAssetSize: 512000,
+  },
+  resolve: {
+    extensions: ['.tsx', '.ts', '.js', '.jsx'],
+    alias: {
+      '@components': path.resolve(__dirname, 'src/components'),
+    },
   },
 };
