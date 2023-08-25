@@ -26,6 +26,7 @@ function App() {
             <th>Title 1</th>
             <th>Title 2</th>
             <th>Title 3</th>
+            <th>Title 3</th>
           </tr>
         </thead>
         <tbody>
