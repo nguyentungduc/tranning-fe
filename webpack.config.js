@@ -23,6 +23,30 @@ module.exports = {
         test: /\.s[ac]ss|css$/,
         use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
       },
+      {
+        test: /\.(png|jpe?g|gif|svg)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'images/',
+            },
+          },
+        ],
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'fonts',
+            },
+          },
+        ],
+      },
     ],
   },
   plugins: [

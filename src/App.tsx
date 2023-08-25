@@ -1,9 +1,12 @@
 import React from 'react';
 import { FC } from 'react';
+import reactlogo from './assets/images/react.svg';
 
 const App: FC = () => {
   return (
-    <div className="container">
+    <div className="container page-home ">
+      <img src={reactlogo} alt="React Logo" width={100} height={100} />
+
       <h1>Title h1</h1>
       <h2>Title h2</h2>
       <h3>Title h3</h3>
@@ -11,9 +14,9 @@ const App: FC = () => {
       <h5>Title h5</h5>
       <h6>Title h6</h6>
       <ul className="row pt-10">
-        <li className="col-small-3">Column</li>
-        <li className="col-small-3">Column</li>
-        <li className="col-small-3">Column</li>
+        <li className="col-small-3">Column 1</li>
+        <li className="col-small-3">Column 2</li>
+        <li className="col-small-3">Column 3</li>
         <li className="col-small-3">Column</li>
         <li className="col-small-3">Column</li>
         <li className="col-small-3">Column</li>
