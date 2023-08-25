@@ -7,6 +7,5 @@ var variableE = [
     variableA = [];
     variableB = [];
     variableC = [];
-    variableD = [];
   },
 ];
