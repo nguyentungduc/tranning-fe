@@ -5,7 +5,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 module.exports = {
   mode: 'production',
   entry: {
-    app: path.resolve('scss/styles.scss'),
+    app: path.resolve('src/index.tsx'),
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -14,6 +14,10 @@ module.exports = {
   },
   module: {
     rules: [
+      {
+        test: /\.tsx?$/,
+        loader: 'babel-loader',
+      },
       {
         test: /\.s[ac]ss|css$/,
         use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
@@ -27,17 +31,22 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'Webpack App',
       filename: 'index.html',
-      template: './index.html',
+      template: './public/index.html',
     }),
   ],
   devServer: {
     static: {
-      directory: 'dist', // Đường dẫn tương đối đến với thư mục chứa index.html
+      directory: 'dist',
     },
-    port: 3000, // Port thay cho port mặc định (8080)
-    open: true, // Mở trang webpack khi chạy terminal
-    hot: true, // Bật tính năng reload nhanh Hot Module Replacement
-    compress: true, // Bật Gzip cho các tài nguyên
-    historyApiFallback: true, // Set true nếu bạn dùng cho các SPA và sử dụng History API của HTML5
+    port: 3000,
+    open: true,
+    hot: true,
+    compress: true,
+    historyApiFallback: true,
+  },
+  performance: {
+    hints: false,
+    maxEntrypointSize: 512000,
+    maxAssetSize: 512000,
   },
 };
