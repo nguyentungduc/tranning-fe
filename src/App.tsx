@@ -1,10 +1,12 @@
 import React from 'react';
 import { FC } from 'react';
 import reactlogo from './assets/images/react.svg';
+import BirthText from '@components/Month';
 
 const App: FC = () => {
   return (
     <div className="container page-home ">
+      <BirthText />
       <img src={reactlogo} alt="React Logo" width={100} height={100} />
 
       <h1>Title h1</h1>
