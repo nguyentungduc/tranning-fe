@@ -17,7 +17,7 @@ indent_style = space
 indent_size = 2
 
 # Định dạng riêng cho tệp JavaScript (js) và TypeScript (ts)
-[*.{js,ts}]
+[*.{js,ts,tsx}]
 indent_style = space
 indent_size = 2
 

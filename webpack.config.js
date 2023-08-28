@@ -78,6 +78,7 @@ module.exports = {
     extensions: ['.tsx', '.ts', '.js', '.jsx'],
     alias: {
       '@components': path.resolve(__dirname, 'src/components'),
+      '@locales': path.resolve(__dirname, 'src/assets/locales'),
     },
   },
 };
